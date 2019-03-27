@@ -1,0 +1,12 @@
+language: ruby
+cache: bundler
+
+rvm:
+ - 2.3
+
+services:
+ - mysql
+
+after_script:
+ - bundle exec shiba review --submit --verbose
+
