@@ -7,6 +7,9 @@ rvm:
 services:
  - mysql
 
+before_install:
+  - mysql -e 'CREATE DATABASE nab_test'
+
 after_script:
  - bundle exec shiba review --submit --verbose
 
