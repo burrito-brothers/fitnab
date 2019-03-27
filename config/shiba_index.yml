@@ -1,0 +1,47 @@
+---
+ar_internal_metadata:
+  count: 1
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: key
+        rows_per: 1
+      unique: true
+  column_sizes:
+    created_at: 8
+    key: 11
+    updated_at: 8
+    value: 4
+people:
+  count: 1000000
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: id
+        rows_per: 1
+      unique: true
+    index_people_on_occupation:
+      name: index_people_on_occupation
+      columns:
+      - column: occupation
+        rows_per: 50%
+  column_sizes:
+    created_at: 8
+    heartrate: 4
+    id: 8
+    name: 8
+    occupation: 8
+    updated_at: 8
+schema_migrations:
+  count: 1
+  indexes:
+    PRIMARY:
+      name: PRIMARY
+      columns:
+      - column: version
+        rows_per: 1
+      unique: true
+  column_sizes:
+    version: 14
